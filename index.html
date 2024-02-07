@@ -29,12 +29,13 @@
             'onStateChange': onPlayerStateChange
           }
         });
-        player.playVideo();
+        
       }
 
 
       var flag = false;
       function onPlayerStateChange(event) {
+        console.log(player + " : " +event.data);
         if (event.data == 0) {
             event.target.playVideo();
         }else if(event.data == 3){
@@ -42,7 +43,7 @@
         }else if(event.data == -1 && flag == true){
           player.playVideo();
         }
-        console.log(event.data);
+        
       }
       function stopVideo() {
         player.stopVideo();
