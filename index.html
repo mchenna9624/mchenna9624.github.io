@@ -51,13 +51,17 @@
       window.addEventListener('message', function(event) {
       var receivedScrollHeight = event.data;
 
-      console.log('Received scroll height from parent:', receivedScrollHeight);
+      if(typeof receivedScrollHeight == 'number'){
+              console.log('Received scroll height from parent:', receivedScrollHeight);
 
   if(receivedScrollHeight > 450){
     player.pauseVideo();
   }else {
     player.playVideo();
   }
+      }
+
+
 });
 
     </script>
