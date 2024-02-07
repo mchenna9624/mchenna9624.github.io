@@ -27,6 +27,7 @@
             'controls': 0
           },
           events: {
+            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
         });
@@ -43,6 +44,10 @@
         if(event.data == 0){
          event.target.playVideo();
         }
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
       }
       
 
