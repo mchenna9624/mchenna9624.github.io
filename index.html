@@ -8,6 +8,7 @@
 window.addEventListener('message', function(event) {
   var receivedScrollHeight = event.data;
   alert('Received scroll height from parent:', receivedScrollHeight);
+  console.log('Received scroll height from parent:', receivedScrollHeight);
   // Do something with the received scroll height
 });
 </script>
