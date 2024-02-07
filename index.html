@@ -30,14 +30,18 @@
             'onStateChange': onPlayerStateChange
           }
         });
-        
+        setTimeout(function(){
+          player.playVideo();
+        }, 10000);
       }
 
 
       var flag = false;
       function onPlayerStateChange(event) {
         console.log(player + " : " +event.data);
+        if(event.data == 0){
          event.target.playVideo();
+        }
       }
       
 
