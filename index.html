@@ -34,13 +34,16 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        //console.log("ready event : " + event.data );
-        //event.target.playVideo();
+        player.playVideo();
       }
-
+      var flag = false;
       function onPlayerStateChange(event) {
         if (event.data == 0) {
             event.target.playVideo();
+        }else if(event.data == 3){
+          flag = true;
+        }else if(event.data == -1 && flag == true){
+          player.playVideo();
         }
         console.log(event.data);
       }
