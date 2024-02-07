@@ -32,14 +32,15 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        console.log("ready event : " + event.data );
-        event.target.playVideo();
+        //console.log("ready event : " + event.data );
+        //event.target.playVideo();
       }
 
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
+      setTimeout(function(){
+        player.playVideo();
+      }, 1000);
+
+
       function onPlayerStateChange(event) {
         if (event.data == 0) {
             event.target.playVideo();
