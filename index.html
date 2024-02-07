@@ -5,6 +5,14 @@
     <div id="player"></div>
 
     <script>
+window.addEventListener('message', function(event) {
+  var receivedScrollHeight = event.data;
+  console.log('Received scroll height from parent:', receivedScrollHeight);
+  // Do something with the received scroll height
+});
+</script>
+
+    <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
