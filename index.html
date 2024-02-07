@@ -21,7 +21,9 @@
           height: '360',
           videoId: '0QhhGtFRaDs',
           playerVars: {
-            'playsinline': 1
+            'playsinline': 1,
+            'autoplay': 1, 
+            'controls': 0
           },
           events: {
             'onReady': onPlayerReady,
@@ -35,11 +37,6 @@
         //console.log("ready event : " + event.data );
         //event.target.playVideo();
       }
-
-      setTimeout(function(){
-        player.playVideo();
-      }, 4000);
-
 
       function onPlayerStateChange(event) {
         if (event.data == 0) {
